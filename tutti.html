@@ -9,8 +9,8 @@
         body{
             margin: 0;
             min-height: 100vh;
-            background: rgba(128, 0, 128, 0.425) url(fotos/family.jpg.jpeg) top no-repeat;
-            background-size: 100% auto;
+            background: rgba(128, 0, 128, 0.425) url(fotos/tutti.jpg.jpeg) top no-repeat;
+            background-size: cover;
             background-attachment: scroll;
         }
         section > p{
@@ -38,6 +38,11 @@
         color: black;
     }    
     @media screen and (max-width: 600px) {
+    body{
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }   
     h1 {
         font-size: 2rem;
     }
