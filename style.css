@@ -6,10 +6,14 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 html,body{
     min-height:100vh;
     background-color: #D899FF;
+}
+body{
+    overflow-x: hidden;
 }
 header{
     background-color: #230a3398;
@@ -17,9 +21,8 @@ header{
 }
 h1{
     font-family: 'Tangerine', serif;
-    font-size: 10vw;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    font-size: clamp(3rem, 10vw, 8rem);
+    padding: 50px 15px;
     text-align: center;
 
 }
@@ -29,43 +32,46 @@ h2{
 }
 p{
     font-family: 'Merienda';
-    font-size: 300;
+    font-size: 1rem;
 }
 section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding: 10vh 30px;
     line-height: 2em;
-    padding-left: 30px;
 }
 section.imagem{
     background-color: white;
     color: black; 
     box-shadow: inset 6px 6px 16px rgba(0, 0, 0, 0.685); 
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    max-width: 100%;
+    min-height: 500px;
 }
 section.imagem > p{
-    width: 400px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.438);
     color: white;
 } 
 section.imagem > h2{
-    width: 400px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 5px 10px;
     background-color: rgba(0, 0, 0, 0.438);
     color: white;
 }
 section#img1{
     background-image: url(fotos/us.jpg.jpeg);
-    background-position: center center;
-    
 }
 section#img2{
     background-image: url(fotos/us2.jpg.jpeg);
-    background-position:center center;
-    
 }
 a > p{
     font-family: Sriracha;
+    padding: 15px;
 }
 footer{
     background-color: rgba(0, 0, 0, 0.425);
@@ -75,4 +81,33 @@ footer > p{
     text-align: center;
     padding: 5px;
     font-family: 'Times New Roman', Times, serif;
+}
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.5rem;
+        padding: 30px 10px;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 0.85rem;
+    }
+    section {
+        padding: 40px 15px;
+    }
+    section.imagem {
+        background-attachment: scroll;
+        background-position: center center;
+        min-height: 450px;
+    }
+    section.imagem p {
+        width: fit-content;
+        max-width: 100%;
+        padding: 15%;
+        overflow-wrap: break-word;
+    }
+    section.imagem h2 {
+        max-width: 100%;
+    }
 }
