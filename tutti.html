@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body{
-            background: rgba(128, 0, 128, 0.425) url(fotos/family.jpg.jpeg) top;
-            background-size: cover;
+            background: rgba(128, 0, 128, 0.425) url(fotos/family.jpg.jpeg) top no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
         }
         h1{
             background-color: rgba(0, 0, 0, 0.377);
@@ -21,6 +22,20 @@
             width: 400px;
             border-radius: 10px;
         }
+        @media screen and (max-width: 600px) {
+    body {
+        background-size: 100% auto;
+        background-position: center top;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+    }
+
+    section {
+        width: auto;
+        margin: 20px 15px;
+        padding: 15px;
+    }
+}
     </style>
     <title>Poems</title>
 </head>
